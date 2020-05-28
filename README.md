@@ -159,4 +159,4 @@ Un fork du repo original . Puis, un Pull Request contenant :
 
 ## Échéance
 
-Le 1 juin 2020 à 23h59
+Le 8 juin 2020 à 23h59
