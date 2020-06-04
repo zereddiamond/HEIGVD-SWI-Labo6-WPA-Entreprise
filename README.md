@@ -70,13 +70,25 @@ Dans cette première partie, vous allez analyser [une connexion WPA Entreprise](
 > **_Question :_** Quelle ou quelles méthode(s) d’authentification est/sont proposé(s) au client ?
 > 
 > **_Réponse :_** 
-
+> Les méthodes EAP-TLS et EAP-PEAP.
+>
+> AP proposant EAP-TLS au client
+> ![proposition AP 1](./question1_1.png)
+> 
+> Client qui désire plutôt utiliser EAP-PEAP
+>![proposition client 1](./question1_2.png)
+>
+>AP accepte et démarre la méthode EAP-PEAP
+>![démarrage AP 1](./question1_3.png)
+>
 ---
 
 > **_Question:_** Quelle méthode d’authentification est finalement utilisée ?
 > 
 > **_Réponse:_** 
-
+>	la méthode EAP-PEAP
+>
+>![question 2](./question2_1.png)
 ---
 
 > **_Question:_** Lors de l’échange de certificats entre le serveur d’authentification et le client :
@@ -84,11 +96,13 @@ Dans cette première partie, vous allez analyser [une connexion WPA Entreprise](
 > - a. Le serveur envoie-t-il un certificat au client ? Pourquoi oui ou non ?
 > 
 > **_Réponse:_**
-> 
+> oui, le serveur envoie un certificat au client lors de la phase d'établissement du tunnel TLS. le certificat permet de sécuriser les messages échangés dans le tunnel TLS pour l'authentification MSCHAP.
+>![question 3 1](./question3_1.png)
+>
 > - b. Le client envoie-t-il un certificat au serveur ? Pourquoi oui ou non ?
 > 
 > **_Réponse:_**
-> 
+> Non, le client n'envoie pas de certificats au serveur parce qu'il utilise EAP-PEAP et non EAP-TLS. Pour l'authentification, il s'agit de MSCHAP qui va être utilisé en envoyant un challenge lors du tunnel TLS.
 
 ---
 
